@@ -17,7 +17,7 @@ public class MarkdownParse {
                 int nextOpenBracket = markdown.indexOf("[", currentIndex);
                 int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
                 int openParen = markdown.indexOf("(", nextCloseBracket);
-                int closeParen = markdown.indexOf(")", markdown.length() - 1);
+                int closeParen = markdown.indexOf(")", openParen);
                 if (closeParen == openParen + 1) {
                     System.out.println("Error: No link provided");
                 } else {
